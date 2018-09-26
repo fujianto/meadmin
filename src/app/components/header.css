@@ -2,11 +2,23 @@
   background: #5236c3;
   color: #fff;
   padding: 5px 0;
+  position: relative;
   margin-bottom: 20px;
 }
 
+.toggle-drawer {
+  background: none;
+  border: 0;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
 .header .site-title {
-  margin: 10px 10px;
+  margin: 10px 10px 10px 40px;
 }
 
 .header .site-title {
