@@ -11,7 +11,7 @@ describe('Header component', () => {
 
     const rendered = shallow(<Header />);
     expect(rendered.find('header.header').exists()).toEqual(true);
-    expect(rendered.find('h1.header-title').exists()).toEqual(true);
-    expect(rendered.find('h1.header-title').text()).toEqual("Dashboard App");
+    expect(rendered.find('h1.site-title').exists()).toEqual(true);
+    expect(rendered.find('h1.site-title').text()).toEqual("Dashboard App");
   });
 })
