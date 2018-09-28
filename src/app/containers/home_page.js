@@ -4,11 +4,6 @@ import { connect } from 'react-redux';
 import { setName } from 'app/actions/dashboard';
 
 class HomePage extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.handleNameChange = this.handleNameChange.bind(this);
-  }
-
   handleNameChange(e) {
     this.props.setName(e.target.value)
   }

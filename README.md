@@ -1,6 +1,6 @@
 # MeAdmin
 
-One Paragraph of project description goes here
+Simple admin dashboard build using React
 
 ## Getting Started
 
