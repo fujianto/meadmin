@@ -4,7 +4,7 @@ import Reducer from 'app/reducers/dashboard';
 describe("Dashboard reducer", () => {
   it('should return the initial state', () => {
     expect(Reducer(undefined, {})).toEqual({
-      name: "",
+      name: "Septian",
       posts: []
     });
   });
@@ -20,7 +20,7 @@ describe("Dashboard reducer", () => {
 
   it('should set posts to new value based on action input', () => {
     const expectedValue = {
-      name: "",
+      name: "Septian",
       posts: [
         { id: 1, title: "stub-title-1"},
         { id: 1, title: "stub-title-1" }

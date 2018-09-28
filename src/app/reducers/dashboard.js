@@ -1,7 +1,7 @@
 import { SET_NAME, FETCH_POSTS } from 'app/actions/dashboard';
 
 const initialState = {
-  name: "",
+  name: "Septian",
   posts: [],
 }
 
