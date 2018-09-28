@@ -13,6 +13,6 @@ describe('Root component', () => {
 
     expect(rendered.find(Provider).exists()).toEqual(true);
     expect(rendered.find(Router).exists()).toEqual(true);
-    expect(rendered.find(Route).length).toEqual(2);
+    expect(rendered.find(Route).length).toEqual(3);
   });
 })
