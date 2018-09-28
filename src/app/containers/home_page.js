@@ -21,8 +21,8 @@ class HomePage extends PureComponent {
 
        <p>This is your Homepage served by Service A.</p>
        <div className="form-group"> 
-        <label htmlFor="name">Name</label>
-        <input onChange={ (e) => this.handleNameChange(e) } className="form-control" type="text" name="name" id="name" value={ this.props.name }/>
+        <label className="name-label" htmlFor="name">Name</label>
+        <input onChange={ (e) => this.handleNameChange(e) } className="form-control" type="text" name="name-input" id="name-input" value={ this.props.name }/>
        </div>
       </div>
     )
