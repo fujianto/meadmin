@@ -27,4 +27,4 @@ describe('TabContent container', () => {
     expect(rendered.children().length).toEqual(1);
     expect(rendered.children().find('p').at(0).text()).toEqual("Hello World!");
   });
-})
+});
