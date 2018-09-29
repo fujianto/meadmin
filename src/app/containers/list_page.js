@@ -15,7 +15,7 @@ class ListPage extends PureComponent {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.fetchPosts();
   }
 
@@ -23,14 +23,9 @@ class ListPage extends PureComponent {
     const url = `${API_URL}/?_limit=10&_page=${this.state.page}`;
     const res = await async_fetch(url);
     this.props.fetchPosts(res);
-
-    console.log(url)
-    console.log(res);
   }
 
   async handlePaginationClick(pos) {
-    console.log(`=====`)
-    console.log(pos)
     await this.setState({
       page: pos
     });
