@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import async_fetch from 'app/helpers/async_fetch';
+import { request } from 'app/helpers/async_fetch';
 import { API_URL } from 'app/config';
 import { connect } from 'react-redux'
 import { fetchPosts } from 'app/actions/dashboard';
@@ -21,8 +21,11 @@ class ListPage extends PureComponent {
 
   async fetchPosts(page) {
     const url = `${API_URL}/?_limit=10&_page=${page}`;
-    const res = await async_fetch(url);
-    this.props.fetchPosts(res);
+    const res = await request.async_fetch(url);
+    
+    if (!res.error) {
+      this.props.fetchPosts(res);
+    }
   }
 
   async handlePaginationClick(pos) {

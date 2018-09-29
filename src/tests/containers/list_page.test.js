@@ -8,7 +8,7 @@ import AsyncFetch from 'app/helpers/async_fetch';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-fdescribe('ListPage component', () => {
+describe('ListPage component', () => {
   it('#render ListPage and empty Table with pagination', () => {
     const rendered = shallow(<ListPage fetchPosts={ jest.fn() } />);
     
