@@ -60,3 +60,11 @@ To run test coverage
 ```console
 yarn test --coverage
 ```
+
+## Production build
+
+```console
+yarn build
+```
+
+Production build will be available on `build` directory in project root.
