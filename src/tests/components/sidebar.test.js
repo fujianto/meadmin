@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from 'app/components/sidebar';
+import { Sidebar, activeMenuClass } from 'app/components/sidebar';
 import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -9,8 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Sidebar component', () => {
   it('#render Sidebar component', () => {
-    const rendered = shallow(<Sidebar />);
-
+    const rendered = shallow(<Sidebar location={ { pathname: '/' } } />);
     expect(rendered.find('aside.sidebar').exists()).toEqual(true);
     expect(rendered.find('ul.sidebar-menu').exists()).toEqual(true);
     expect(rendered.find('ul.sidebar-menu li').length).toEqual(3);
@@ -24,5 +23,17 @@ describe('Sidebar component', () => {
 
     expect(rendered.find('ul.sidebar-menu li').at(2).find(Link).props().to).toEqual('/list');
     expect(rendered.find('ul.sidebar-menu li').at(2).find(Link).props().children).toEqual('List');
+  });
+
+  it('#activeMenuClass return "active" class when link path is same with to path', () => {
+    const classLi = activeMenuClass('/list', '/list');
+    
+    expect(classLi).toEqual('active');
+  });
+
+  it('#activeMenuClass return "" class when link path is not same with to path', () => {
+    const classLi = activeMenuClass('/', '/list');
+
+    expect(classLi).toEqual('');
   });
 })
