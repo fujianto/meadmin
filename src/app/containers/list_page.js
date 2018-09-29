@@ -16,11 +16,11 @@ class ListPage extends PureComponent {
   }
 
   componentDidMount() {
-    this.fetchPosts();
+    this.fetchPosts(this.state.page);
   }
 
-  async fetchPosts() {
-    const url = `${API_URL}/?_limit=10&_page=${this.state.page}`;
+  async fetchPosts(page) {
+    const url = `${API_URL}/?_limit=10&_page=${page}`;
     const res = await async_fetch(url);
     this.props.fetchPosts(res);
   }
@@ -30,7 +30,7 @@ class ListPage extends PureComponent {
       page: pos
     });
 
-    await this.fetchPosts();
+    await this.fetchPosts(this.state.page);
   }
 
   render() {
