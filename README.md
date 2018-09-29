@@ -2,86 +2,61 @@
 
 Simple admin dashboard build using React
 
-## Getting Started
+### Live demo
+[MeAdmin](https://zuwallabag.firebaseapp.com/ )
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Please make sure yarn and npm already installed in your system.
 
-```
-Give examples
+#### Mac
+
+```console
+brew install yarn
 ```
 
+#### Ubuntu / Debian
+
+```console
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
+
+## Getting Started
+
+Clone the repository and move into:
+
+```console
+$ git clone https://github.com/fujianto/meadmin.git
+$ cd meadmin
+```
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+After cloning the repository, install required dependency.
 
-Say what the step will be
-
-```
-Give the example
+```console
+yarn install
 ```
 
-And repeat
+Then start the app:
 
 ```
-until finished
+yarn start
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Open your browser on `http://localhost:3000/`.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run all test:
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```console
+yarn test
 ```
 
-### And coding style tests
+To run test coverage
 
-Explain what these tests test and why
-
+```console
+yarn test --coverage
 ```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
