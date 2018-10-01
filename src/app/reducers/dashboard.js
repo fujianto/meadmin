@@ -14,7 +14,6 @@ export default function Dashboard(state = initialState, action) {
       return { ...state, name: newName };
 
     case FETCH_POSTS:
-      console.log(state)
       const latestPosts = state.posts.concat(action.payload.posts);
       return { ...state, posts: latestPosts };
 
