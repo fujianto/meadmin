@@ -5,15 +5,16 @@ const initialState = {
   posts: [],
 }
 
-export default function Dashboard(state, action) {
-  state = initialState
-
+export default function Dashboard(state = initialState, action) {
+  state = Object.keys(state).length === 0 ? initialState : state;
+  
   switch (action.type) {
     case SET_NAME:
       const newName = action.payload.name;
       return { ...state, name: newName };
 
     case FETCH_POSTS:
+      console.log(state)
       const latestPosts = state.posts.concat(action.payload.posts);
       return { ...state, posts: latestPosts };
 

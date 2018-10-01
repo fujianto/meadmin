@@ -15,7 +15,12 @@ describe("Dashboard reducer", () => {
       posts: []
     };
 
-    expect(Reducer({}, Action.setName("stub-name"))).toEqual(expectedValue);
+    const initialState = {
+      name: "",
+      posts: []
+    }
+
+    expect(Reducer(initialState, Action.setName("stub-name"))).toEqual(expectedValue);
   });
 
   it('should set posts to new value based on action input', () => {
